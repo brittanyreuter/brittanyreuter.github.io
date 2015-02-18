@@ -362,15 +362,16 @@ th {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-body {
-  -webkit-font-smoothing: antialiased;
+html {
   background-color: #8c96a0;
   background-image: -webkit-linear-gradient(-310deg, #8c96a0, #8d9da7);
   background-image: linear-gradient(40deg,#8c96a0, #8d9da7);
+  min-height: 100vh; }
+
+body {
+  -webkit-font-smoothing: antialiased;
   color: rgba(255, 255, 255, 0.7);
   font-family: "Lora", Georgia, Cambria, "Times New Roman", Times, serif;
-  min-height: 100vh;
-  min-width: 100vw;
   padding: 2em; }
   @media screen and (min-width: 340px) {
     body {
@@ -395,14 +396,10 @@ p {
   max-width: 30em; }
 
 a {
-  -webkit-transition: all 0.15s ease-out 0s;
-  -moz-transition: all 0.15s ease-out 0s;
-  transition: all 0.15s ease-out 0s;
+  transition: color 0.1s linear;
   color: white;
   font-weight: 700;
   text-decoration: none; }
-  a:hover {
-    background-color: rgba(52, 73, 94, 0.1); }
 
 ul {
   display: -webkit-box;
@@ -418,5 +415,20 @@ ul {
 
 li:not(:first-child) {
   margin-left: 1em; }
+
+.ansible:hover, .ansible:focus, .ansible:active {
+  color: #72f285; }
+
+.linkedin:hover, .linkedin:focus, .linkedin:active {
+  color: #fcd656; }
+
+.twitter:hover, .twitter:focus, .twitter:active {
+  color: #90dbf9; }
+
+.rdio:hover, .rdio:focus, .rdio:active {
+  color: #f28572; }
+
+.email:hover, .email:focus, .email:active {
+  color: #f8bbd0; }
 
 /*# sourceMappingURL=main.css.map */

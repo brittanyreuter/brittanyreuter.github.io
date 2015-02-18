@@ -1,5 +1,5 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # misc
-styles/.sass-cache
+.sass-cache
 .DS_Store

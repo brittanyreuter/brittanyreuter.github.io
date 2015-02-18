@@ -8,13 +8,15 @@ $base-font-family: "Lora", $georgia;
   @include box-sizing(border-box);
 }
 
+html {
+  @include linear-gradient(40deg, #8c96a0, #8d9da7);
+  min-height: 100vh;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
-  @include linear-gradient(40deg, #8c96a0, #8d9da7);
   color: rgba(white, 0.7);
   font-family: $base-font-family;
-  min-height: 100vh;
-  min-width: 100vw;
   padding: 2em;
 
   @media screen and (min-width: 340px) {
@@ -45,14 +47,10 @@ p {
 }
 
 a {
-  @include transition;
+  transition: color 0.1s linear;
   color: white;
   font-weight: 700;
   text-decoration: none;
-
-  &:hover {
-    background-color: rgba(#34495e,0.1);
-  }
 }
 
 ul {
@@ -64,4 +62,22 @@ ul {
 
 li:not(:first-child) {
   margin-left: 1em;
+}
+
+$colors: (
+  ansible: #72f285,
+  linkedin: #fcd656,
+  twitter: #90dbf9,
+  rdio: #f28572,
+  email: #f8bbd0
+);
+
+@each $target, $color in $colors {
+  .#{$target} {
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color;
+    }
+  }
 }
